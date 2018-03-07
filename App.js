@@ -19,7 +19,9 @@ export default class App extends Component {
       "Content-type": "application/json",
       method: "GET"
     }).then(res => res.json())
-      .then(fotos => this.setState({ fotos: fotos }))
+      .then(fotos => {
+        this.setState({ fotos: fotos })
+      })
       .catch(err => console.warn(error));
   }
 
